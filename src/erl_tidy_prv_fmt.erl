@@ -69,5 +69,7 @@ fmt_opts() ->
      {no_imports, undefined, "no_imports", {boolean, false},
       "all import statements will be removed "
       "and calls to imported functions will be expanded "
-      "to explicit remote calls"}
+      "to explicit remote calls"},
+     {backups, undefined, "backups", {boolean, true},
+      "keep backups of your original code safely stored"}
     ].
