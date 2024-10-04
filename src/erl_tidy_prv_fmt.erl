@@ -71,5 +71,5 @@ fmt_opts() ->
       "and calls to imported functions will be expanded "
       "to explicit remote calls"},
      {backups, undefined, "backups", {boolean, true},
-      "keep backups of your original code safely stored"}
+      "keep backups of your original code safely stored" }
     ].

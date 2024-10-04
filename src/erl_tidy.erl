@@ -199,7 +199,7 @@ dir_4(File, Regexp, Env) ->
 
 file__defaults() ->
     [{backup_suffix, ?DEFAULT_BACKUP_SUFFIX},
-     backups, 
+     backups,
      {dir, ?DEFAULT_DIR},
      {printer, default_printer()},
      {quiet, false},
@@ -1849,19 +1849,19 @@ error_open_output(Name) ->
     report_error("cannot open file `~ts' for output.", [filename(Name)]).
 
 verbosity(Opts) ->
-    case proplists:get_bool(quiet, Opts) of 
+    case proplists:get_bool(quiet, Opts) of
         true -> 0;
         false ->
             case proplists:get_value(verbose, Opts) of
                 true -> 2;
-                N when is_integer(N) -> N; 
+                N when is_integer(N) -> N;
                 _ -> 1
             end
     end.
 
 report_error(D) ->
     report_error(D, []).
-    
+
 report_error({F, L, D}, Vs) ->
     report({F, L, {error, D}}, Vs);
 report_error(D, Vs) ->
